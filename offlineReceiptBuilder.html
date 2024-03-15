@@ -6,7 +6,7 @@
 
 </head>
 <body>
-
+<form>
 <div id="title">
 	<h1>Offline Receipt Builder</h1>
 </div>
@@ -122,23 +122,28 @@
 			<th><label for='transaction'>Transaction:</label></th>
 			
 			<td>
-				<fieldset class= "transType">
-					<input id="trans" type="radio">
+					<input id="trans" type="radio"name="transaction">
 					<label for="trans">Transfer</label>
-					<input id="dep" type="radio">
+					<input value="deposit" type="radio"name="transaction">
 					<label for="dep">Deposit</label>
-					<input id="with" type="radio">
+					<input value="withdrawal" type="radio" name="transaction">
 					<label for="with">Withdrawal</label>
-				</fieldset>	
 			</td>
-			
+
 		</tr>
 		
 		
 		
+		
+		
+		
+		
+		<! THIS IS THE BUTTONS AT THE BOTTOM !>
 		<tr>
+			<td><input type="reset" value="Reset"</td>
 			<td><input type="submit" value="Submit"</td>
 		</tr>
+
 		
 		
 		<! accounts
@@ -171,7 +176,7 @@
 
 
 
-
+</form>
 </body>
 </html>
 
