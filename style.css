@@ -1,0 +1,56 @@
+html{
+	background-color:white;
+}
+
+
+body{
+	max-width: 302px;
+	display: flex;
+	font-size:10pt;
+}
+
+#builder{
+	float: center;
+}
+
+
+#title{
+	color:black;
+	background-color:white;
+	text-align:center;
+}
+
+label {
+	padding: 4px;
+}
+
+
+#identity label {
+	max-width:50%;
+	float: left;
+	text-align:center;
+}
+
+#identity input, #identity select, #datetime{
+	float:right;
+	max-width:50%;
+}
+
+.dep-labels {
+	width: 100%;
+	text-align:center;
+	border-bottom: 1px solid black;
+}
+
+.dep-input{
+	width: 100%;
+}
+
+.bills label, .coins label {
+	width:33.33%;
+}
+
+.value, .quantity {
+	max-width:33.33%
+}
+

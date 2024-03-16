@@ -8,132 +8,283 @@
 <body>
 <form>
 <div id="title">
-	<h1>Offline Receipt Builder</h1>
+	<h2>Offline Receipt</h2>
+	<h4>Please verify your transaction by logging into mobile banking or web access</h4>
 </div>
 
 
 <div id="builder">
 
-
-			<div>Date</div>
+		<div id="identity">
+			<label for="datetime">Date & Time:</label>
 			<div id="datetime"></div>
-
+			
+			<label for="branch">Branch:</label>
+			<input type="text" id="branch">
+				
+			<label for="account">Account Number:</label>
+			<input type = "text" id = "account" maxlength="8">
+				
+			<label for="employeeID">Employee ID:</label>
+			<input id = "employeeId" maxlength="10">
+				
+			<label for="memberName">Member Name:</label>
+			<input id = "memberName" type="text">
+				
+			<label for="contactNum">Contact Number:</label>
+			<input id = "contactNum" type="tel" maxlength = "10" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
 		
-
-			<div>Account Number</div>
-			<div><input type = "text" id = "account" maxlength="8"></input></div>
-
-
-		<div>
-			<div>Employee #</div>
-			<div><input id = "employeeId" maxlength="10"></input></div>
+			<div id="id-section">			
+				<label for='ids'>Select ID Type:</label>
+					<select name="id" id = "">
+						<option>Please Select</option>
+						<option value="DL">Driver's License</option>
+						<option value="SID">State Identification Card</option>
+						<option value="FID">Foreign ID</option>
+						<option value="IID">Identification ID</option>
+						<option value="DPL">Drivers Privilege License</option>
+						<option value="AQ">Asked Questions</option>
+						<option value="EK">Employee Knows</option>
+					</select>	
+			
+				<label for='states'>Select State:</label>
+					<select name='state' id='states'>
+						<option>Please Select</option>
+						<option value="alabama">Alabama</option>
+						<option value="alaska">Alaska</option>
+						<option value="Arizona">Arizona</option>
+						<option value="Arkansas">Arkansas</option>
+						<option value="California">California</option>					
+						<option value="Colorado">Colorado</option>
+						<option value="Connecticut">Connecticut</option>
+						<option value="Delaware">Delaware</option>
+						<option value="florida">Florida</option>
+						<option value="georgia">Georgia</option>				
+						<option value="hawaii">Hawaii</option>
+						<option value="idaho">Idaho</option>
+						<option value="illinois">Illinois</option>
+						<option value="indiana">Indiana</option>
+						<option value="iowa">Iowa</option>					
+						<option value="kansas">Kansas</option>
+						<option value="kentucky">Kentucky</option>
+						<option value="louisiana">Louisiana</option>
+						<option value="maine">Maine</option>
+						<option value="maryland">Maryland</option>
+						<option value="massachusetts">Massachusetts</option>
+						<option value="michigan">Michigan</option>
+						<option value="minnesota">Minnesota</option>
+						<option value="mississippi">Mississippi</option>
+						<option value="missouri">Missouri</option>					
+						<option value="montana">Montana</option>
+						<option value="nebraska">Nebraska</option>
+						<option value="nevada">Nevada</option>
+						<option value="new hampshire">New Hampshire</option>
+						<option value="new jersey">New Jersey</option>					
+						<option value="new mexico">New Mexico</option>
+						<option value="new york">New York</option>
+						<option value="north carolina">North Carolina</option>
+						<option value="north dakota">North Dakota</option>
+						<option value="ohio">Ohio</option>					
+						<option value="oklahoma">Oklahoma</option>
+						<option value="oregon">Oregon</option>
+						<option value="pennsylvania">Pennsylvania</option>
+						<option value="rhode island">Rhode Island</option>
+						<option value="south carolina">South Carolina</option>
+						<option value="south dakota">South Dakota</option>
+						<option value="tennessee">Tennessee</option>
+						<option value="texas">Texas</option>
+						<option value="utah">Utah</option>
+						<option value="vermont">Vermont</option>					
+						<option value="virginia">Virginia</option>
+						<option value="washington">Washington</option>
+						<option value="west virginia">West Virginia</option>
+						<option value="wisconsin">Wisconsin</option>
+						<option value="wyoming">Wyoming</option>
+					</select>
+				
+				<label for="idNum">ID Number</div>
+				<input type="text" id="idNum">
+				
+				<label for="idExp">Expiration Date</label>
+				<input type="date" id="idExp">
+				
+			</div> <! END OF ID-SECTION !>
 		</div>
 		
-		<div>
-			<div>Member Name</div>
-			<div><input id = "memberName" type="text"></input></div>
+	<br></br> 
+		
+	
+		
+		<div id="transaction-select">
+			<label for='transaction'>Transaction:</label>
+			<input id="trans" type="radio"name="transaction">
+			<label for="trans">Transfer</label>
+			<input value="deposit" type="radio"name="transaction">
+			<label for="dep">Deposit</label>
+			<input value="withdrawal" type="radio" name="transaction">
+			<label for="with">Withdrawal</label>
 		</div>
-		
-		<div>
-			<div>Contact Number</div>
-			<div><input id = "contactNum" type="tel" maxlength = "10" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input>
-			</div>
+
+		<div id="transfer-section">
+			<div id="trans-from" class="acc-select">
+			<select>
+				<option>Savings 1</option>
+				<option>Checking</option>
+				<option>Visa</option>
+				<option>Line of Credit</option>
+				<option>Loan 1</option>
+				<option>Loan 2</option>
+				<option>Loan 3</option>
+				<option>Loan 4</option>
+				<option>Loan 5</option>
+				<option>Loan 6</option>
+				<option>Loan 7</option>
+				<option>Loan 8</option>
+				<option>Savings 2</option>
+				<option>Savings 3</option>
+				<option>Savings 4</option>
+				<option>Savings 8</option>
+				<option>MM Savings 2</option>
+				<option>MM Savings 3</option>
+				<option>MM Savings 4</option>
+				<option>MM Savings 7</option>
+				<option>MM Savings 8</option>
+			</select>
 		</div>
-		
-		<div id="id-section">			
-			<div><label for='ids'>Select ID Type </label></div>
-				<select name="id" id = "">
-					<option>Please Select</option>
-					<option value="DL">Driver's License</option>
-					<option value="SID">State Identification Card</option>
-					<option value="FID">Foreign ID</option>
-					<option value="IID">Identification ID</option>
-					<option value="DPL">Drivers Privilege License</option>
-					<option value="AQ">Asked Questions</option>
-					<option value="EK">Employee Knows</option>
-				</select>	
-		
-			<div><label for='states'>Select State</label></div>
-			<div>
-				<select name='state' id='states'>
-					<option>Please Select</option>
-					<option value="alabama">Alabama</option>
-					<option value="alaska">Alaska</option>
-					<option value="Arizona">Arizona</option>
-					<option value="Arkansas">Arkansas</option>
-					<option value="California">California</option>					
-					<option value="Colorado">Colorado</option>
-					<option value="Connecticut">Connecticut</option>
-					<option value="Delaware">Delaware</option>
-					<option value="florida">Florida</option>
-					<option value="georgia">Georgia</option>				
-					<option value="hawaii">Hawaii</option>
-					<option value="idaho">Idaho</option>
-					<option value="illinois">Illinois</option>
-					<option value="indiana">Indiana</option>
-					<option value="iowa">Iowa</option>					
-					<option value="kansas">Kansas</option>
-					<option value="kentucky">Kentucky</option>
-					<option value="louisiana">Louisiana</option>
-					<option value="maine">Maine</option>
-					<option value="maryland">Maryland</option>
-					<option value="massachusetts">Massachusetts</option>
-					<option value="michigan">Michigan</option>
-					<option value="minnesota">Minnesota</option>
-					<option value="mississippi">Mississippi</option>
-					<option value="missouri">Missouri</option>					
-					<option value="montana">Montana</option>
-					<option value="nebraska">Nebraska</option>
-					<option value="nevada">Nevada</option>
-					<option value="new hampshire">New Hampshire</option>
-					<option value="new jersey">New Jersey</option>					
-					<option value="new mexico">New Mexico</option>
-					<option value="new york">New York</option>
-					<option value="north carolina">North Carolina</option>
-					<option value="north dakota">North Dakota</option>
-					<option value="ohio">Ohio</option>					
-					<option value="oklahoma">Oklahoma</option>
-					<option value="oregon">Oregon</option>
-					<option value="pennsylvania">Pennsylvania</option>
-					<option value="rhode island">Rhode Island</option>
-					<option value="south carolina">South Carolina</option>
-					<option value="south dakota">South Dakota</option>
-					<option value="tennessee">Tennessee</option>
-					<option value="texas">Texas</option>
-					<option value="utah">Utah</option>
-					<option value="vermont">Vermont</option>					
-					<option value="virginia">Virginia</option>
-					<option value="washington">Washington</option>
-					<option value="west virginia">West Virginia</option>
-					<option value="wisconsin">Wisconsin</option>
-					<option value="wyoming">Wyoming</option>
+			<div id="trans-to" class="acc-select">
+					<label for="dif-account">Account # (for different)</label>
+					<input id="dif-account" type="num">
+				<select>
+					<option>Savings 1</option>
+					<option>Checking</option>
+					<option>Visa</option>
+					<option>Line of Credit</option>
+					<option>Loan 1</option>
+					<option>Loan 2</option>
+					<option>Loan 3</option>
+					<option>Loan 4</option>
+					<option>Loan 5</option>
+					<option>Loan 6</option>
+					<option>Loan 7</option>
+					<option>Loan 8</option>
+					<option>Savings 2</option>
+					<option>Savings 3</option>
+					<option>Savings 4</option>
+					<option>Savings 8</option>
+					<option>MM Savings 2</option>
+					<option>MM Savings 3</option>
+					<option>MM Savings 4</option>
+					<option>MM Savings 7</option>
+					<option>MM Savings 8</option>
 				</select>
-			
-			<div>ID Number</div>
-			<div><input type="text"></input></div>
-			
-			<div>Expiration Date</div>
-			<div><input type="date"></input></div>
-			
-		</div> <! END OF ID-SECTION !>
-		
-		<br></br> 
-		
-		<div>
-			<div><label for='transaction'>Transaction:</label></div>
-			
-			<div>
-					<input id="trans" type="radio"name="transaction">
-					<label for="trans">Transfer</label>
-					<input value="deposit" type="radio"name="transaction">
-					<label for="dep">Deposit</label>
-					<input value="withdrawal" type="radio" name="transaction">
-					<label for="with">Withdrawal</label>
 			</div>
-
 		</div>
 		
+		<div id="dep-with-section">
 		
+		
+			<select id="with-select" class="acc-select">
+				<option>Savings 1</option>
+				<option>Checking</option>
+				<option>Line of Credit</option>
+				<option>Savings 2</option>
+				<option>Savings 3</option>
+				<option>Savings 4</option>
+				<option>Savings 8</option>
+				<option>MM Savings 2</option>
+				<option>MM Savings 3</option>
+				<option>MM Savings 4</option>
+				<option>MM Savings 7</option>
+				<option>MM Savings 8</option>
+			</select>
+		
+		
+			<select id="dep-select" class="acc-select">
+				<option>Savings 1</option>
+				<option>Checking</option>
+				<option>Visa</option>
+				<option>Line of Credit</option>
+				<option>Loan 1</option>
+				<option>Loan 2</option>
+				<option>Loan 3</option>
+				<option>Loan 4</option>
+				<option>Loan 5</option>
+				<option>Loan 6</option>
+				<option>Loan 7</option>
+				<option>Loan 8</option>
+				<option>Savings 2</option>
+				<option>Savings 3</option>
+				<option>Savings 4</option>
+				<option>Savings 8</option>
+				<option>MM Savings 2</option>
+				<option>MM Savings 3</option>
+				<option>MM Savings 4</option>
+				<option>MM Savings 7</option>
+				<option>MM Savings 8</option>
+			</select>
+		
+			<div id="dep-input">
+				
+				<div class="dep-labels">Bills</div>
+			
+
+					<label for="hundred" class="type">$100</label>
+						<input type="number" id="hundred" class="value">
+						<input type="number" id="hundred" class="quantity">
+					<label for="fifty"class="type">$50</label>
+						<input type="number" id="fifty" class="value">
+						<input type="number" id="fifty" class="quantity">
+					<label for="twenty"class="type">$20</label>
+						<input type="number" id="twenty" class="value">
+						<input type="number" id="twenty" class="quantity">
+					<label for="ten"class="type">$10</label>
+						<input type="number" id="ten" class="value">
+						<input type="number" id="ten" class="quantity">
+					<label for="five"class="type">$5</label>
+						<input type="number" id="five" class="value">
+						<input type="number" id="five" class="quantity">
+					<label for="two"class="type">$2</label>
+						<input type="number" id="two" class="value">
+						<input type="number" id="two" class="quantity">
+					<label for="one"class="type">$1</label>
+						<input type="number" id="one" class="value">
+						<input type="number" id="one" class="quantity">
+					
+				<div class="dep-labels">Coin</div>
+				
+					<label for="dollar">$1</label>
+						<input type="number" id="dollar"class="value">
+						<input type="number" id="dollar"class="quantity">
+
+					<label for="half">50¢</label>
+						<input type="number" id="half"class="value">
+						<input type="number" id="half"class="quantity">
+
+					<label for="quarter">25¢</label>
+						<input type="number" id="quarter"class="value">
+						<input type="number" id="quarter"class="quantity">
+
+					<label for="dime">10¢</label>
+						<input type="number" id="dime"class="value">
+						<input type="number" id="dime"class="quantity">
+
+					<label for="nickel">5¢</label>
+						<input type="number" id="nickel"class="value">
+						<input type="number" id="nickel"class="quantity">
+
+					<label for="penny">1¢</label>
+						<input type="number" id="penny"class="value">
+						<input type="number" id="penny"class="quantity">
+				
+			</div>
+		
+		
+		</div>
+		
+		<div>
+			<label for="total">Total</label>
+				<input type="number" id="total">
+		</div>
 		
 		
 		
