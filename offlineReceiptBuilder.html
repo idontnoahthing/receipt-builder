@@ -13,33 +13,36 @@
 
 
 <div id="builder">
-	<table>
-		<tr>
-			<th>Date</th>
-			<td id="datetime"></td>
-		</tr>
-		<tr>
-			<th>Account Number</th>
-			<td><input type = "text" id = "account" maxlength="8"></input></td>
-		</tr>
 
-		<tr>
-			<th>Employee #</th>
-			<td><input id = "employeeId" maxlength="10"></input></td>
-		</tr>
-				<tr>
-			<th>Member Name</th>
-			<td><input id = "memberName" type="text"></input></td>
-		</tr>
-				<tr>
-			<th>Contact Number</th>
-			<td><input id = "contactNum" type="tel" maxlength = "10" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input></td>
-		</tr>
-		<tr>
-			
-			<th><label for='ids'>Select ID Type </label></th>
-			<td>
-				<select name="id" id = "ids">
+
+			<div>Date</div>
+			<div id="datetime"></div>
+
+		
+
+			<div>Account Number</div>
+			<div><input type = "text" id = "account" maxlength="8"></input></div>
+
+
+		<div>
+			<div>Employee #</div>
+			<div><input id = "employeeId" maxlength="10"></input></div>
+		</div>
+		
+		<div>
+			<div>Member Name</div>
+			<div><input id = "memberName" type="text"></input></div>
+		</div>
+		
+		<div>
+			<div>Contact Number</div>
+			<div><input id = "contactNum" type="tel" maxlength = "10" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input>
+			</div>
+		</div>
+		
+		<div id="id-section">			
+			<div><label for='ids'>Select ID Type </label></div>
+				<select name="id" id = "">
 					<option>Please Select</option>
 					<option value="DL">Driver's License</option>
 					<option value="SID">State Identification Card</option>
@@ -48,12 +51,10 @@
 					<option value="DPL">Drivers Privilege License</option>
 					<option value="AQ">Asked Questions</option>
 					<option value="EK">Employee Knows</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<th><label for='states'>Select State</label></th>
-			<td>
+				</select>	
+		
+			<div><label for='states'>Select State</label></div>
+			<div>
 				<select name='state' id='states'>
 					<option>Please Select</option>
 					<option value="alabama">Alabama</option>
@@ -107,30 +108,30 @@
 					<option value="wisconsin">Wisconsin</option>
 					<option value="wyoming">Wyoming</option>
 				</select>
-			</td>
-		</tr>
-		<tr>
-			<th>ID Number</th>
-			<td><input type="text"></input></td>
-		</tr>
-		<tr>
-			<th>Expiration Date</th>
-			<td><input type="date"></input></td>
-		</tr>
-		
-		<tr>
-			<th><label for='transaction'>Transaction:</label></th>
 			
-			<td>
+			<div>ID Number</div>
+			<div><input type="text"></input></div>
+			
+			<div>Expiration Date</div>
+			<div><input type="date"></input></div>
+			
+		</div> <! END OF ID-SECTION !>
+		
+		<br></br> 
+		
+		<div>
+			<div><label for='transaction'>Transaction:</label></div>
+			
+			<div>
 					<input id="trans" type="radio"name="transaction">
 					<label for="trans">Transfer</label>
 					<input value="deposit" type="radio"name="transaction">
 					<label for="dep">Deposit</label>
 					<input value="withdrawal" type="radio" name="transaction">
 					<label for="with">Withdrawal</label>
-			</td>
+			</div>
 
-		</tr>
+		</div>
 		
 		
 		
@@ -139,10 +140,10 @@
 		
 		
 		<! THIS IS THE BUTTONS AT THE BOTTOM !>
-		<tr>
+		<div>
 			<td><input type="reset" value="Reset"</td>
 			<td><input type="submit" value="Submit"</td>
-		</tr>
+		</div> 
 
 		
 		
@@ -170,8 +171,6 @@
 			MM Savings 8
 		!>
 
-		
-	</table>
 </div> <! end of receipt printer div>
 
 
