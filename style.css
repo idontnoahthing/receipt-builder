@@ -1,56 +1,31 @@
 html{
-	background-color:white;
-}
-
-
-body{
-	max-width: 302px;
+	background-color: white;
 	display: flex;
-	font-size:10pt;
 }
-
-#builder{
+body {
+	display: flex;
 	float: center;
+	width: 302px;
 }
 
-
-#title{
-	color:black;
-	background-color:white;
-	text-align:center;
-}
-
-label {
-	padding: 4px;
-}
-
-
-#identity label {
-	max-width:50%;
-	float: left;
-	text-align:center;
-}
-
-#identity input, #identity select, #datetime{
-	float:right;
-	max-width:50%;
-}
-
-.dep-labels {
-	width: 100%;
-	text-align:center;
-	border-bottom: 1px solid black;
-}
-
-.dep-input{
+.title,.data,.id,.transaction {
+	background-color: white;
+	border: 1px solid black;
 	width: 100%;
 }
 
-.bills label, .coins label {
-	width:33.33%;
+.title {
+	text-align: center;
 }
 
-.value, .quantity {
-	max-width:33.33%
+.data {
+	display: flex;
+	text-align: center;
 }
 
+.data div{
+	display: flex;
+	flex-direction: column;
+	align-content:space-evenly;
+	justify-content: space-evenly;
+}
