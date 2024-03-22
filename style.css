@@ -11,7 +11,7 @@ body {
 .title,.data,.id,.transaction {
 	background-color: white;
 	border: 1px solid black;
-	width: 100%;
+	max-width: 100%;
 }
 
 .title {
@@ -29,3 +29,31 @@ body {
 	align-content:space-evenly;
 	justify-content: space-evenly;
 }
+
+.id {
+	display: flex;
+	text-align:center;
+}
+
+.id div {
+	text-align:center;
+	flex-direction: column;
+	align-content:space-evenly;
+	justify-content: space-evenly;
+}
+
+.id label, .id select, .id input {
+	max-width: 100%;
+	text-align:center;
+}
+
+.id select {
+	width: 98%;
+}
+
+.id input {
+	
+}
+
+
+
